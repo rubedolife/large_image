@@ -199,7 +199,7 @@ class SVSFileTileSource(FileTileSource):
             except openslide.lowlevel.OpenSlideError:
                 self._openslide = openslide.OpenSlide(path)
         # sort highest resolution first.
-        levels = [entry[-1] for entry in sorted(levels, reverse=True)]
+        levels = [entry[-1] for entry in sorted(levels, reverse=True, key=lambda lt: lt[0])]
         # Discard levels that are not a power-of-two compared to the highest
         # resolution level.
         levels = [entry for entry in levels if
