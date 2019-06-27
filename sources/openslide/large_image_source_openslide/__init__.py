@@ -55,7 +55,8 @@ class OpenslideFileTileSource(FileTileSource):
         'scn': SourcePriority.LOW,  # Leica
         'svs': SourcePriority.PREFERRED,
         'svslide': SourcePriority.PREFERRED,
-        'tif': SourcePriority.MEDIUM,
+        #'tif': SourcePriority.MEDIUM,
+        'tif': SourcePriority.PREFERRED,
         'tiff': SourcePriority.MEDIUM,
         'vms': SourcePriority.HIGH,  # Hamamatsu
         'vmu': SourcePriority.HIGH,  # Hamamatsu
